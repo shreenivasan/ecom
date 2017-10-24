@@ -1,0 +1,9 @@
+need to install node first
+install angular cli
+npm install -g @angular/cli
+for creating angular projec
+ng new projectname[for clearing new project]
+for run on local server
+cd projectname
+ng serve/npm start[both will do same task]
+
