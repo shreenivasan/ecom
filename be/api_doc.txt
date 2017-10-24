@@ -1,0 +1,53 @@
+1) To register new user
+
+	POST http://localhost/ecom/be/v1/register
+	Params 
+			name = <sample_name>
+			email = <sample_email>
+			password = <sample_password>
+-----------------------------------------------------------------------------------------------------------------
+
+2) To login for getting api key
+
+	POST 	http://localhost/ecom/be/v1/register
+	Params 
+			email = <sample_email>
+			password = <sample_password>
+
+	O/P:
+
+			{
+			    "error": false,
+			    "name": "Shreenivas",
+    			"email": "shreenivas.madagundi@gmail.com",
+			    "apiKey": "c7d5d378648023655afc2254ca03cedd",
+			    "createdAt": "2014-01-07 23:38:35"
+			}
+
+-----------------------------------------------------------------------------------------------------------------
+
+3) To get all products
+
+	POST http://localhost/ecom/be/v1/products
+	
+	Headers params
+		Authorization api_key
+
+	O/P
+		 {1:{name:Square Wall Spot Light by Philips,url:philips-32044-11-moistureproof-ip21-wall-light-single-head-for-bathrooms-square-s-1.html,price:1495},2:{name:Single Shade Picture Light by Aesthetic Home Solutions,url:aesthetichs-contemporary-chrome-finished-mirror-and-picture-wall-light-2.html,price:805}}
+
+-----------------------------------------------------------------------------------------------------------------	
+4) To get all products
+
+	POST http://localhost/ecom/be/v1/products/<product_id>
+	
+	Headers params
+		Authorization = api_key
+
+	O/P
+		{name:Single Shade Picture Light by Aesthetic Home Solutions,url:aesthetichs-contemporary-chrome-finished-mirror-and-picture-wall-light-2.html,price:805}
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+
