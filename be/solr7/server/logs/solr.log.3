@@ -1,0 +1,82 @@
+2017-10-24 11:39:33.990 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2017-10-24 11:39:34.375 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.1.0
+2017-10-24 11:39:34.375 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-10-24 11:39:34.375 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/shreenivas/solr7, Default config dir: /home/shreenivas/solr7/server/solr/configsets/_default/conf
+2017-10-24 11:39:34.392 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-10-24T11:39:34.376Z
+2017-10-24 11:39:34.393 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-10-24 11:39:34.405 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/shreenivas/solr7/server/solr
+2017-10-24 11:39:34.410 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/shreenivas/solr7/server/solr/solr.xml
+2017-10-24 11:39:34.996 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /home/shreenivas/solr7/server/solr
+2017-10-24 11:39:34.998 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [products, orders]
+2017-10-24 11:39:35.004 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2017-10-24 11:39:35.091 INFO  (main) [   ] o.e.j.s.Server Started @1597ms
+2017-10-24 11:39:35.122 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrResourceLoader [orders] Added 53 libs to classloader, from paths: [/home/shreenivas/solr7/contrib/clustering/lib, /home/shreenivas/solr7/contrib/extraction/lib, /home/shreenivas/solr7/contrib/langid/lib, /home/shreenivas/solr7/contrib/velocity/lib, /home/shreenivas/solr7/dist]
+2017-10-24 11:39:35.125 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.SolrResourceLoader [products] Added 53 libs to classloader, from paths: [/home/shreenivas/solr7/contrib/clustering/lib, /home/shreenivas/solr7/contrib/extraction/lib, /home/shreenivas/solr7/contrib/langid/lib, /home/shreenivas/solr7/contrib/velocity/lib, /home/shreenivas/solr7/dist]
+2017-10-24 11:39:35.324 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.1.0
+2017-10-24 11:39:35.337 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.1.0
+2017-10-24 11:39:35.619 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.s.IndexSchema [products] Schema name=default-config
+2017-10-24 11:39:35.635 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.IndexSchema [orders] Schema name=default-config
+2017-10-24 11:39:36.258 ERROR (coreContainerWorkExecutor-2-thread-1) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [products]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:671)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:188)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [products]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1045)
+	at org.apache.solr.core.CoreContainer.lambda$load$13(CoreContainer.java:642)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: org.apache.solr.common.SolrException: Could not load conf for core products: Can't load schema /home/shreenivas/solr7/server/solr/products/conf/managed-schema: Unknown fieldType 'int' specified on field is_in_stock
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:97)
+	at org.apache.solr.core.CoreContainer.getConfigSet(CoreContainer.java:1073)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1025)
+	... 7 more
+Caused by: org.apache.solr.common.SolrException: Can't load schema /home/shreenivas/solr7/server/solr/products/conf/managed-schema: Unknown fieldType 'int' specified on field is_in_stock
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:578)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:175)
+	at org.apache.solr.schema.ManagedIndexSchema.<init>(ManagedIndexSchema.java:105)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:173)
+	at org.apache.solr.schema.ManagedIndexSchemaFactory.create(ManagedIndexSchemaFactory.java:45)
+	at org.apache.solr.schema.IndexSchemaFactory.buildIndexSchema(IndexSchemaFactory.java:75)
+	at org.apache.solr.core.ConfigSetService.createIndexSchema(ConfigSetService.java:119)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:92)
+	... 9 more
+Caused by: org.apache.solr.common.SolrException: Unknown fieldType 'int' specified on field is_in_stock
+	at org.apache.solr.schema.IndexSchema.loadFields(IndexSchema.java:636)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:472)
+	... 16 more
+2017-10-24 11:39:36.421 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2017-10-24 11:39:36.460 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.CoreContainer Creating SolrCore 'orders' using configuration from instancedir /home/shreenivas/solr7/server/solr/orders, trusted=true
+2017-10-24 11:39:36.502 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-10-24 11:39:36.509 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrCore [[orders] ] Opening new SolrCore at [/home/shreenivas/solr7/server/solr/orders], dataDir=[/home/shreenivas/solr7/server/solr/orders/data/]
+2017-10-24 11:39:36.554 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-10-24 11:39:36.941 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-10-24 11:39:36.941 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-10-24 11:39:36.957 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-10-24 11:39:36.957 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-10-24 11:39:37.041 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.SolrIndexSearcher Opening [Searcher@711750e7[orders] main]
+2017-10-24 11:39:37.057 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/shreenivas/solr7/server/solr/orders/conf
+2017-10-24 11:39:37.080 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-10-24 11:39:37.088 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-10-24 11:39:37.107 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2017-10-24 11:39:37.176 INFO  (searcherExecutor-7-thread-1-processing-x:orders) [   x:orders] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@711750e7[orders] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-24 11:39:37.177 INFO  (searcherExecutor-7-thread-1-processing-x:orders) [   x:orders] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-10-24 11:39:37.177 INFO  (searcherExecutor-7-thread-1-processing-x:orders) [   x:orders] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-10-24 11:39:37.182 INFO  (searcherExecutor-7-thread-1-processing-x:orders) [   x:orders] o.a.s.c.SolrCore [orders] Registered new searcher Searcher@711750e7[orders] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-24 11:39:37.185 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1582138840511938560
+2017-10-24 11:39:38.729 INFO  (qtp20671747-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1508845178518} status=0 QTime=7
+2017-10-24 11:39:38.733 INFO  (qtp20671747-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508845178518} status=0 QTime=16
+2017-10-24 11:39:38.749 INFO  (qtp20671747-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508845178519} status=0 QTime=29
+2017-10-24 11:39:53.224 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1769190683
+2017-10-24 11:39:53.225 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2017-10-24 11:39:53.225 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2017-10-24 11:39:53.225 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2017-10-24 11:39:53.226 INFO  (coreCloseExecutor-12-thread-1) [   x:orders] o.a.s.c.SolrCore [orders]  CLOSING SolrCore org.apache.solr.core.SolrCore@2d34b847
+2017-10-24 11:39:53.226 INFO  (coreCloseExecutor-12-thread-1) [   x:orders] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.orders, tag=758429767

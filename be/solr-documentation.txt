@@ -1,0 +1,23 @@
+1) Install JDK >= 1.8 
+
+2) Download solr7.1.0 from 
+	
+	http://www-eu.apache.org/dist/lucene/solr/7.1.0
+
+3) Extract it at some location & rename it to solr (we have used solr7)
+
+4) Go to your solr directory using terminal & execute following commands
+
+5) Start solr 
+
+	bin/solr start
+
+6) Creat core
+
+	bin/solr create_core -c products
+
+7) create schema
+
+	
+
+	

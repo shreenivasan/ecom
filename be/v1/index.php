@@ -3,7 +3,7 @@ ini_set('display_errors',1);
 require_once '../include/DbHandler.php';
 require_once '../include/PassHash.php';
 require '../lib/Slim/Slim.php';
- 
+require_once '../include/common.php'; 
 \Slim\Slim::registerAutoloader();
  
 $app = new \Slim\Slim();
@@ -183,10 +183,10 @@ function authenticate(\Slim\Route $route) {
     }
 }
 
-$app->get('/products', 'authenticate', function() {			 
-			$response =  [];
-			$response = file_get_contents('../include/raw.json');		
-            echoRespnse(200, $response);
+$app->get('/products', function() {			 
+			$response =  '';
+                        $commonObj = new Common();
+                        echo $response = $commonObj->getProductDataFromSolr();
         });
 
 

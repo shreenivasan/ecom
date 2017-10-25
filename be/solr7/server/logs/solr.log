@@ -1,0 +1,97 @@
+2017-10-25 06:10:33.990 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2017-10-25 06:10:34.525 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.1.0
+2017-10-25 06:10:34.525 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-10-25 06:10:34.525 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/shreenivas/solr7, Default config dir: /home/shreenivas/solr7/server/solr/configsets/_default/conf
+2017-10-25 06:10:34.557 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-10-25T06:10:34.527Z
+2017-10-25 06:10:34.557 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-10-25 06:10:34.660 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/shreenivas/solr7/server/solr
+2017-10-25 06:10:34.675 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/shreenivas/solr7/server/solr/solr.xml
+2017-10-25 06:10:36.341 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /home/shreenivas/solr7/server/solr
+2017-10-25 06:10:36.343 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [products, orders]
+2017-10-25 06:10:36.352 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2017-10-25 06:10:36.556 INFO  (main) [   ] o.e.j.s.Server Started @3283ms
+2017-10-25 06:10:36.578 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrResourceLoader [orders] Added 53 libs to classloader, from paths: [/home/shreenivas/solr7/contrib/clustering/lib, /home/shreenivas/solr7/contrib/extraction/lib, /home/shreenivas/solr7/contrib/langid/lib, /home/shreenivas/solr7/contrib/velocity/lib, /home/shreenivas/solr7/dist]
+2017-10-25 06:10:36.582 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.SolrResourceLoader [products] Added 53 libs to classloader, from paths: [/home/shreenivas/solr7/contrib/clustering/lib, /home/shreenivas/solr7/contrib/extraction/lib, /home/shreenivas/solr7/contrib/langid/lib, /home/shreenivas/solr7/contrib/velocity/lib, /home/shreenivas/solr7/dist]
+2017-10-25 06:10:37.629 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.1.0
+2017-10-25 06:10:37.642 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.1.0
+2017-10-25 06:10:38.122 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.IndexSchema [orders] Schema name=default-config
+2017-10-25 06:10:38.160 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.s.IndexSchema [products] Schema name=default-config
+2017-10-25 06:10:39.206 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2017-10-25 06:10:39.207 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2017-10-25 06:10:39.315 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.CoreContainer Creating SolrCore 'orders' using configuration from instancedir /home/shreenivas/solr7/server/solr/orders, trusted=true
+2017-10-25 06:10:39.326 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.CoreContainer Creating SolrCore 'products' using configuration from instancedir /home/shreenivas/solr7/server/solr/products, trusted=true
+2017-10-25 06:10:39.408 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-10-25 06:10:39.408 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-10-25 06:10:39.424 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.c.SolrCore [[products] ] Opening new SolrCore at [/home/shreenivas/solr7/server/solr/products], dataDir=[/home/shreenivas/solr7/server/solr/products/data/]
+2017-10-25 06:10:39.424 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.c.SolrCore [[orders] ] Opening new SolrCore at [/home/shreenivas/solr7/server/solr/orders], dataDir=[/home/shreenivas/solr7/server/solr/orders/data/]
+2017-10-25 06:10:39.475 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-10-25 06:10:39.477 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-10-25 06:10:40.096 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-10-25 06:10:40.096 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-10-25 06:10:40.144 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-10-25 06:10:40.151 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-10-25 06:10:40.166 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-10-25 06:10:40.166 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-10-25 06:10:40.188 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-10-25 06:10:40.188 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-10-25 06:10:40.334 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.SolrIndexSearcher Opening [Searcher@4886a53c[orders] main]
+2017-10-25 06:10:40.406 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/shreenivas/solr7/server/solr/orders/conf
+2017-10-25 06:10:40.554 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-10-25 06:10:40.553 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.s.SolrIndexSearcher Opening [Searcher@3bf60147[products] main]
+2017-10-25 06:10:40.568 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/shreenivas/solr7/server/solr/products/conf
+2017-10-25 06:10:40.573 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-10-25 06:10:40.579 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-10-25 06:10:40.582 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-10-25 06:10:40.623 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2017-10-25 06:10:40.626 INFO  (coreLoadExecutor-6-thread-1) [   x:products] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2017-10-25 06:10:40.711 INFO  (searcherExecutor-7-thread-1-processing-x:products) [   x:products] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3bf60147[products] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.1.0):C1)))}
+2017-10-25 06:10:40.712 INFO  (searcherExecutor-7-thread-1-processing-x:products) [   x:products] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-10-25 06:10:40.712 INFO  (searcherExecutor-7-thread-1-processing-x:products) [   x:products] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-10-25 06:10:40.718 INFO  (searcherExecutor-7-thread-1-processing-x:products) [   x:products] o.a.s.c.SolrCore [products] Registered new searcher Searcher@3bf60147[products] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.1.0):C1)))}
+2017-10-25 06:10:40.724 INFO  (searcherExecutor-8-thread-1-processing-x:orders) [   x:orders] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@4886a53c[orders] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-25 06:10:40.725 INFO  (searcherExecutor-8-thread-1-processing-x:orders) [   x:orders] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-10-25 06:10:40.725 INFO  (searcherExecutor-8-thread-1-processing-x:orders) [   x:orders] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-10-25 06:10:40.725 INFO  (searcherExecutor-8-thread-1-processing-x:orders) [   x:orders] o.a.s.c.SolrCore [orders] Registered new searcher Searcher@4886a53c[orders] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-10-25 06:10:40.736 INFO  (coreLoadExecutor-6-thread-2) [   x:orders] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1582208742311591936
+2017-10-25 06:11:04.563 INFO  (qtp20671747-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508911864309} status=0 QTime=7
+2017-10-25 06:11:04.638 INFO  (qtp20671747-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508911864320} status=0 QTime=72
+2017-10-25 06:11:04.642 INFO  (qtp20671747-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508911864320} status=0 QTime=65
+2017-10-25 06:11:06.576 INFO  (qtp20671747-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508911864309} status=0 QTime=0
+2017-10-25 06:11:06.590 INFO  (qtp20671747-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508911864320} status=0 QTime=10
+2017-10-25 06:11:06.591 INFO  (qtp20671747-21) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1508911866558} status=0 QTime=11
+2017-10-25 06:11:06.598 INFO  (qtp20671747-18) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/replication params={wt=json&command=details&_=1508911866559} status=0 QTime=8
+2017-10-25 06:11:06.596 INFO  (qtp20671747-13) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1508911864321&ts=1508911864321} status=503 QTime=1
+2017-10-25 06:11:06.615 INFO  (qtp20671747-19) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/admin/system params={wt=json&_=1508911866558} status=0 QTime=25
+2017-10-25 06:11:09.940 INFO  (qtp20671747-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508911864309} status=0 QTime=0
+2017-10-25 06:11:09.949 INFO  (qtp20671747-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508911864320} status=0 QTime=5
+2017-10-25 06:11:12.034 INFO  (qtp20671747-12) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&_=1508911869843} hits=1 status=0 QTime=99
+2017-10-25 06:11:14.332 INFO  (qtp20671747-17) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 06:11:45.969 INFO  (qtp20671747-21) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&url=http://localhost:8983/solr/products/select?q%3D*:*} hits=1 status=0 QTime=28
+2017-10-25 06:18:23.361 INFO  (qtp20671747-16) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=} hits=0 status=0 QTime=0
+2017-10-25 09:43:02.109 INFO  (qtp20671747-13) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&url=http://localhost:8983/solr/products/select?q%3D*:*} hits=1 status=0 QTime=29
+2017-10-25 09:43:53.008 INFO  (qtp20671747-21) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:45:18.430 INFO  (qtp20671747-19) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:46:18.706 INFO  (qtp20671747-16) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:47:32.044 INFO  (qtp20671747-18) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:51:12.761 INFO  (qtp20671747-12) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:51:44.587 INFO  (qtp20671747-17) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:51:53.895 INFO  (qtp20671747-14) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:52:29.761 INFO  (qtp20671747-13) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&wt=json} hits=1 status=0 QTime=0
+2017-10-25 09:52:44.226 INFO  (qtp20671747-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508925164051} status=0 QTime=0
+2017-10-25 09:52:44.273 INFO  (qtp20671747-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508925164052} status=0 QTime=39
+2017-10-25 09:52:44.274 INFO  (qtp20671747-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508925164052} status=0 QTime=37
+2017-10-25 09:52:46.617 INFO  (qtp20671747-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508925164051} status=0 QTime=0
+2017-10-25 09:52:46.620 INFO  (qtp20671747-13) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1508925166604} status=0 QTime=0
+2017-10-25 09:52:46.639 INFO  (qtp20671747-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508925164052} status=0 QTime=19
+2017-10-25 09:52:46.648 INFO  (qtp20671747-19) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1508925164053&ts=1508925164053} status=503 QTime=0
+2017-10-25 09:52:46.654 INFO  (qtp20671747-21) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/admin/system params={wt=json&_=1508925166604} status=0 QTime=7
+2017-10-25 09:52:46.825 INFO  (qtp20671747-12) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/replication params={wt=json&command=details&_=1508925166605} status=0 QTime=187
+2017-10-25 09:52:48.579 INFO  (qtp20671747-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1508925164051} status=0 QTime=0
+2017-10-25 09:52:48.594 INFO  (qtp20671747-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1508925164052} status=0 QTime=10
+2017-10-25 09:52:50.103 INFO  (qtp20671747-18) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&_=1508925168497} hits=1 status=0 QTime=0
+2017-10-25 09:53:06.560 INFO  (qtp20671747-13) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:53:23.315 INFO  (qtp20671747-17) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&pretty=} hits=1 status=0 QTime=0
+2017-10-25 09:53:27.636 INFO  (qtp20671747-19) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&pretty=true} hits=1 status=0 QTime=0
+2017-10-25 09:53:33.489 INFO  (qtp20671747-21) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*} hits=1 status=0 QTime=0
+2017-10-25 09:54:14.516 INFO  (qtp20671747-14) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&wt=json} hits=1 status=0 QTime=0
+2017-10-25 09:54:22.816 INFO  (qtp20671747-12) [   x:products] o.a.s.c.S.Request [products]  webapp=/solr path=/select params={q=*:*&wt=json} hits=1 status=0 QTime=0
