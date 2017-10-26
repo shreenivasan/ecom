@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors',1); 
+ini_set('display_errors',0); 
 require_once '../include/DbHandler.php';
 require_once '../include/PassHash.php';
 require '../lib/Slim/Slim.php';
@@ -183,7 +183,7 @@ function authenticate(\Slim\Route $route) {
     }
 }
 
-$app->get('/products', 'authenticate', function() {			 
+$app->get('/products', function() {			 
 			$response =  [];
 			$response = file_get_contents('../include/raw.json');		
             echoRespnse(200, $response);
